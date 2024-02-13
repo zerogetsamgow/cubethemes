@@ -1,0 +1,32 @@
+#' Cube Pink Theme
+#'
+#' This theme takes \code{\link[cubethemes]{theme_cube_foundations}()} and sets
+#' background colour to pink and line and text colours to green.
+#'
+#' Colours are sourced from `cubepalette` and are Cube Brand Guidelines compliant.
+#'
+#'
+#' @family cubethemes
+#' @export
+#' @importFrom ggplot2 theme
+#' @importFrom ggplot2 element_text
+#' @importFrom ggplot2 element_rect
+
+
+theme_cube_pink <- function(base.colour=cube.pink,
+                            line.colour=cube.green,
+                            text.colour=cube.green) {
+
+
+  thm <- cubethemes::theme_cube_foundation()
+
+  thm +
+    ggplot2::theme(
+      # Set colours
+      text=ggplot2::element_text(colour = text.colour),
+      plot.background = ggplot2::element_rect(fill=base.colour),
+      axis.line = ggplot2::element_line(colour=line.colour),
+      axis.text = ggplot2::element_text(colour=text.colour)
+    )
+
+}

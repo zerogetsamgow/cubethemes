@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# cubethemes
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+cubethemes is designed to enable cubies to create great data visualisations that comply with the 
+Cube Group Brand Guidelines.
+
+## Installation
+
+You can install the development version of cubethemes from github using devtools:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("zerogetsamgow/cubethemes")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(ggplot2)
+library(cubethemes)
+library(cubepalette)
+## basic example code
+ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
+  geom_point(size=3) +
+  scale_colour_manual(values=cube_palettes_discrete$dark,labels=str_to_title) +
+  scale_x_continuous(name="Sepal length")+
+  scale_y_continuous(name="Petal length")+
+  theme_cube_white()
+```
+
