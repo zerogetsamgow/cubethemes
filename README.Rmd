@@ -18,32 +18,71 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-cubethemes is designed to enable cubies to create great data visualisations that comply with the 
+{cubethemes} is designed to enable cubies to create great data visualisations that comply with the 
 Cube Group Brand Guidelines.
 
 ## Installation
 
-You can install the development version of cubethemes from github using devtools:
+You can install the development version of {cubethemes} from github using devtools:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("zerogetsamgow/cubethemes")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+{cubethemes} is designed to produce {gglot2} that comply with the Cube Brand Guidelines simply. For example.
 
 ```{r example}
 library(ggplot2)
 library(cubethemes)
 library(cubepalette)
+library(stringr)
 ## basic example code
 ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
   geom_point(size=3) +
-  scale_colour_manual(values=cube_palettes_discrete$dark,labels=str_to_title) +
+  scale_colour_manual(values=cube_palettes_discrete$dark,labels=stringr::str_to_title) +
   scale_x_continuous(name="Sepal length")+
   scale_y_continuous(name="Petal length")+
   theme_cube_white()
 ```
 
+## Three themes to cubify them all  
+
+{cubethemes} exports three themes - `theme_cube_white()`(seen above), `theme_cube_green()` and `theme_cube_pink` to enable plots to be produce any Cube publication. 
+
+Each of these themes is designed to work with different discrete palettes from {cubepallete}:
+
+- `theme_cube_white()` with `cube_palette_discrete$dark`
+
+- `theme_cube_green()` with `cube_palette_discrete$light`
+
+```{r example}
+## basic example of a green plot
+ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
+  geom_point(size=3) +
+  scale_colour_manual(values=cube_palettes_discrete$light,labels=stringr::str_to_title) +
+  scale_x_continuous(name="Sepal length")+
+  scale_y_continuous(name="Petal length")+
+  labs(title="Comparison of sepal and petal of irises")+
+  theme_cube_green()
+```
+
+
+- `theme_cube_pink()` with `cube_palette_discrete$other`
+
+These themes can also work with the `cube_palette_tints` palettes `greys`,`greens` and `pinks`. 
+
+```{r example}
+## basic example of a green plot
+ggplot(data=mtcars,aes(x = as.factor(cyl), colour=NULL, fill=as.factor(cyl), group=cyl)) +
+  geom_histogram(stat="count",size=3)+
+  scale_fill_manual(name="Cylinders", values=cube_palettes_tints$greens,labels=stringr::str_to_title) +
+  scale_y_continuous(name="Count")+
+  scale_x_discrete(name=NULL)+
+  labs(title="Count of cylinders in mtcars dataset")+
+  theme_cube_pink()
+```
+
+As well as utilising the {cubepalette} these themes are rendered using {showtext} to allow the use of `Agenda` font. {cubetheme} installs these fonts.
