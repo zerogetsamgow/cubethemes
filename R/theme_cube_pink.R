@@ -24,7 +24,7 @@ theme_cube_pink <- function(base.colour=cube.pink,
     ggplot2::theme(
       # Set colours
       text=ggplot2::element_text(colour = text.colour),
-      plot.background = ggplot2::element_rect(fill=base.colour),
+      plot.background = ggplot2::element_rect(fill=base.colour, colour=NA),
       axis.line = ggplot2::element_line(colour=line.colour),
       axis.text = ggplot2::element_text(colour=text.colour)
     )

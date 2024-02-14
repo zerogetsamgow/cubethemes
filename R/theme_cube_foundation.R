@@ -29,8 +29,8 @@ theme_cube_foundation <- function(base_size = 15, base_family = "Agenda") {
       # Clear background for clean charts
       rect = ggplot2::element_blank(),
       line = ggplot2::element_blank(),
+      panel.background = ggplot2::element_blank(),
       panel.border = ggplot2::element_blank(),
-      # Define axis foundation parameters
       # Define cube_founcation text parameters
       text=ggplot2::element_text(family="Agenda",size=25),
       plot.title=ggplot2::element_text(size=ggplot2::rel(1.2), face="bold"),
