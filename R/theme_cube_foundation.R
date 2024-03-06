@@ -41,7 +41,13 @@ theme_cube_foundation <- function(base_size = 15, base_family = "Agenda") {
       # Define foundation legend parameters
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_blank(),
-      legend.position = "bottom"
+      legend.position = "bottom",
+      # Define foundation margin parameters
+      plot.margin = margin(1, 1, 1, 1, "cm"),
+      # Define foundation title parameters
+      plot.title = element_text(lineheight = 0.5,
+                                margin = margin(0, 0, .5, 0, "cm")),
+      plot.title.position = "plot"
     )
 
 }
