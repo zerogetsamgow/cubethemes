@@ -60,7 +60,7 @@ theme_cube_foundation <- function(base_size = 15, base_family = "Agenda") {
       legend.key = ggplot2::element_blank(),
       legend.position = "bottom",
       # Define foundation margin parameters
-      plot.margin = margin(1, 1, 1, 1, "cm"),
+      plot.margin = ggplot2::margin(1, 1, 1, 1, "cm"),
       # Define foundation title parameters
       plot.title.position = "plot"
     )
