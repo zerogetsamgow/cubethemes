@@ -3,6 +3,7 @@
 export(install_cube_fonts)
 export(theme_cube_foundation)
 export(theme_cube_green)
+export(theme_cube_map)
 export(theme_cube_pink)
 export(theme_cube_white)
 importFrom(ggplot2,element_rect)

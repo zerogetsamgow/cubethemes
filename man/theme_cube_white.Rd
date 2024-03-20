@@ -22,6 +22,7 @@ Other cubethemes:
 \code{\link{install_cube_fonts}()},
 \code{\link{theme_cube_foundation}()},
 \code{\link{theme_cube_green}()},
+\code{\link{theme_cube_map}()},
 \code{\link{theme_cube_pink}()}
 }
 \concept{cubethemes}
