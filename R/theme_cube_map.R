@@ -29,7 +29,7 @@ theme_cube_map <- function(base_size = 15, base_family = "Agenda") {
       # Clear background for clean charts
       rect = ggplot2::element_blank(),
       line = ggplot2::element_blank(),
-      panel.background = ggplot2::element_blank(),
+      plot.background = element_rect(colour="transparent",fill="white"),
       panel.border = ggplot2::element_blank(),
       # Define cube_founcation text parameters
       text =
@@ -45,22 +45,18 @@ theme_cube_map <- function(base_size = 15, base_family = "Agenda") {
           margin = margin(0, 0, .5, 0, "cm")
         ),
       # Define axis foundation parameters
-      axis.line =
-        ggplot2::element_line(
-          linewidth=1.2,
-          lineend = "round"
-        ),
-      axis.ticks = ggplot2::element_blank(),
-      axis.text =
-        ggplot2::element_text(
-          size=ggplot2::rel(.8)
-        ),
+     # axis.line = ggplot2::element_blank(),
+    #  axis.ticks = ggplot2::element_blank(),
+     # axis.text = ggplot2::element_blank(),
       # Define foundation legend parameters
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_blank(),
-      legend.position = c(0,0),
-      legend.direction = horizontal,
+      legend.position.inside = c(0,0),
+      legend.title.position = "top",
+      legend.direction = "horizontal",
       legend.margin = ggplot2::margin(.1, .1, .1, .1, "cm"),
+    legend.title = element_text(family="Agenda"),
+    legend.text = element_text(family="Agenda"),
       # Define foundation margin parameters
       plot.margin = ggplot2::margin(.5, .5, 0, .5, "cm"),
       # Define foundation title parameters
