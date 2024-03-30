@@ -17,25 +17,57 @@
 #' @importFrom ggplot2 theme
 #' @importFrom ggthemes theme_foundation
 
-theme_cube_map <- function(base_size = 15, base_family = "Agenda") {
+theme_cube_map <-
+  function(
+    base_colour = c("white","green", "pink", "grey"),
+    base_size = 15,
+    base_family = "Agenda") {
 
 
   install_cube_fonts()
 
   thm <- ggthemes::theme_map(base_size = base_size, base_family = base_family)
 
+  if(is.null(base_colour)) {base_colour="white"}
+  .base_colour = switch(
+      base_colour,
+      "white" = cube.white,
+      "green" = cube.green,
+      "pink" = cube.pink,
+      "grey" = cube.grey,
+      "gray" = cube.grey)
+
+  .text_colour=switch(
+    base_colour,
+    "white" = cube.green,
+    "green" = cube.pink,
+    "pink" = cube.green,
+    "grey" = cube.green,
+    "gray" = cube.green)
+
+  .line_colour=switch(
+    base_colour,
+    "white" = cube.green,
+    "green" = cube.pink,
+    "pink" = cube.green,
+    "grey" = cube.green,
+    "gray" = cube.green)
+
+
+
   thm +
     ggplot2::theme(
       # Clear background for clean charts
       rect = ggplot2::element_blank(),
       line = ggplot2::element_blank(),
-      plot.background = element_rect(colour="transparent",fill="white"),
+      plot.background = element_rect(colour="transparent",fill=.base_colour),
       panel.border = ggplot2::element_blank(),
       # Define cube_founcation text parameters
       text =
         ggplot2::element_text(
           family="Agenda",
-          size=25
+          size=25,
+          colour=.text_colour
         ),
       plot.title =
         ggplot2::element_text(
