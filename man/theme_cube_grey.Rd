@@ -5,9 +5,9 @@
 \title{Cube grey Theme}
 \usage{
 theme_cube_grey(
-  base.colour = cube.grey,
-  line.colour = cube.green,
-  text.colour = cube.green
+  base.colour = cubepalette::cube.grey,
+  line.colour = cubepalette::cube.green,
+  text.colour = cubepalette::cube.green
 )
 }
 \description{

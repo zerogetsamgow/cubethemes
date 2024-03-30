@@ -5,9 +5,9 @@
 \title{Cube Green Theme}
 \usage{
 theme_cube_green(
-  base.colour = cube.green,
-  line.colour = cube.pink,
-  text.colour = cube.pink
+  base.colour = cubepalette::cube.green,
+  line.colour = cubepalette::cube.pink,
+  text.colour = cubepalette::cube.pink
 )
 }
 \description{

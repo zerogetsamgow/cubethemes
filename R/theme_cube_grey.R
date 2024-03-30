@@ -12,9 +12,9 @@
 #' @importFrom ggplot2 element_rect
 
 
-theme_cube_grey <- function(base.colour=cube.grey,
-                             line.colour=cube.green,
-                             text.colour=cube.green) {
+theme_cube_grey <- function(base.colour=cubepalette::cube.grey,
+                             line.colour=cubepalette::cube.green,
+                             text.colour=cubepalette::cube.green) {
 
 
   thm <- cubethemes::theme_cube_foundation()

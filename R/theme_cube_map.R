@@ -31,27 +31,27 @@ theme_cube_map <-
   if(is.null(base_colour)) {base_colour="white"}
   .base_colour = switch(
       base_colour,
-      "white" = cube.white,
-      "green" = cube.green,
-      "pink" = cube.pink,
-      "grey" = cube.grey,
-      "gray" = cube.grey)
+      "white" = cubepalette::cube.white,
+      "green" = cubepalette::cube.green,
+      "pink" = cubepalette::cube.pink,
+      "grey" = cubepalette::cube.grey,
+      "gray" = cubepalette::cube.grey)
 
   .text_colour=switch(
     base_colour,
-    "white" = cube.green,
-    "green" = cube.pink,
-    "pink" = cube.green,
-    "grey" = cube.green,
-    "gray" = cube.green)
+    "white" = cubepalette::cube.green,
+    "green" = cubepalette::cube.pink,
+    "pink" = cubepalette::cube.green,
+    "grey" = cubepalette::cube.green,
+    "gray" = cubepalette::cube.green)
 
   .line_colour=switch(
     base_colour,
-    "white" = cube.green,
-    "green" = cube.pink,
-    "pink" = cube.green,
-    "grey" = cube.green,
-    "gray" = cube.green)
+    "white" = cubepalette::cube.green,
+    "green" = cubepalette::cube.pink,
+    "pink" = cubepalette::cube.green,
+    "grey" = cubepalette::cube.green,
+    "gray" = cubepalette::cube.green)
 
 
 
