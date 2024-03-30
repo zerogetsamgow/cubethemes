@@ -15,7 +15,9 @@ This function allows these to be installed within the package
 \seealso{
 Other cubethemes: 
 \code{\link{theme_cube_foundation}()},
+\code{\link{theme_cube_gray}()},
 \code{\link{theme_cube_green}()},
+\code{\link{theme_cube_grey}()},
 \code{\link{theme_cube_map}()},
 \code{\link{theme_cube_pink}()},
 \code{\link{theme_cube_white}()}

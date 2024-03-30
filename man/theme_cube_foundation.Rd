@@ -26,7 +26,9 @@ base text family and size to \code{Agenda} and \code{15}.
 \seealso{
 Other cubethemes: 
 \code{\link{install_cube_fonts}()},
+\code{\link{theme_cube_gray}()},
 \code{\link{theme_cube_green}()},
+\code{\link{theme_cube_grey}()},
 \code{\link{theme_cube_map}()},
 \code{\link{theme_cube_pink}()},
 \code{\link{theme_cube_white}()}

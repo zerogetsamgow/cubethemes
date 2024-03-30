@@ -4,7 +4,11 @@
 \alias{theme_cube_map}
 \title{Cube Map Theme}
 \usage{
-theme_cube_map(base_size = 15, base_family = "Agenda")
+theme_cube_map(
+  base_colour = c("white", "green", "pink", "grey"),
+  base_size = 15,
+  base_family = "Agenda"
+)
 }
 \arguments{
 \item{base_size}{base font size, given in pts.}
@@ -27,7 +31,9 @@ base text family and size to \code{Agenda} and \code{15}.
 Other cubethemes: 
 \code{\link{install_cube_fonts}()},
 \code{\link{theme_cube_foundation}()},
+\code{\link{theme_cube_gray}()},
 \code{\link{theme_cube_green}()},
+\code{\link{theme_cube_grey}()},
 \code{\link{theme_cube_pink}()},
 \code{\link{theme_cube_white}()}
 }

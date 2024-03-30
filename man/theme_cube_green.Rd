@@ -21,6 +21,8 @@ Colours are sourced from \code{cubepalette} and are Cube Brand Guidelines compli
 Other cubethemes: 
 \code{\link{install_cube_fonts}()},
 \code{\link{theme_cube_foundation}()},
+\code{\link{theme_cube_gray}()},
+\code{\link{theme_cube_grey}()},
 \code{\link{theme_cube_map}()},
 \code{\link{theme_cube_pink}()},
 \code{\link{theme_cube_white}()}
