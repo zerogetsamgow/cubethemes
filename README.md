@@ -28,25 +28,24 @@ devtools::install_github("zerogetsamgow/cubethemes")
 
 ## Usage
 
+    #> ── Attaching core tidyverse packages ───────── tidyverse 2.0.0 ──
+    #> ✔ dplyr     1.1.4     ✔ readr     2.1.5
+    #> ✔ forcats   1.0.0     ✔ stringr   1.5.1
+    #> ✔ lubridate 1.9.3     ✔ tibble    3.2.1
+    #> ✔ purrr     1.0.2     ✔ tidyr     1.3.1
+    #> ── Conflicts ─────────────────────────── tidyverse_conflicts() ──
+    #> ✖ dplyr::filter() masks stats::filter()
+    #> ✖ dplyr::lag()    masks stats::lag()
+    #> ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
 {cubethemes} is designed to produce {gglot2} that comply with the Cube
 Brand Guidelines simply. For example.
 
 ``` r
-library(ggplot2)
-library(tidyverse)
-#> ── Attaching core tidyverse packages ───────── tidyverse 2.0.0 ──
-#> ✔ dplyr     1.1.4     ✔ readr     2.1.5
-#> ✔ forcats   1.0.0     ✔ stringr   1.5.1
-#> ✔ lubridate 1.9.3     ✔ tibble    3.2.1
-#> ✔ purrr     1.0.2     ✔ tidyr     1.3.1
-#> ── Conflicts ─────────────────────────── tidyverse_conflicts() ──
-#> ✖ dplyr::filter() masks stats::filter()
-#> ✖ dplyr::lag()    masks stats::lag()
-#> ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 library(cubethemes)
 library(cubepalette)
 #> Loading required package: palettes
-library(stringr)
+
 ## basic example code
 ggplot2::ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
   geom_point(size=3) +
@@ -56,7 +55,7 @@ ggplot2::ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) 
   theme_cube_white()
 ```
 
-<img src="man/figures/README-white example-1.png" width="100%" />
+<img src="man/figures/README-white_example-1.png" width="100%" />
 
 ## Three themes to cubify them all
 
@@ -138,7 +137,7 @@ ggplot(
   geom_text(family="Agenda",colour = cubepalette::cube.darkgreen, lineheight=.5)+
   scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.7)) +
   labs(title="States and Territories of Australia")+
-  theme_cube_map(base_colour = "grey")
+  theme_cube_map(base_colour = "grey", base_size = 10)
 ```
 
 <img src="man/figures/README-map_grey-1.png" width="100%" />
@@ -163,8 +162,8 @@ ggplot(
   geom_text(family="Agenda",colour = cubepalette::cube.grey, lineheight=.5)+
   scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.2)) +
   labs(title="States and Territories of Australia")+
-  theme_cube_map(base_colour = "green")
-#> Reading state2021 file found in C:\Users\SAMUEL~1\AppData\Local\Temp\RtmpU1Tgzk
+  theme_cube_map(base_colour = "green", base_size = 10)
+#> Reading state2021 file found in C:\Users\SAMUEL~1\AppData\Local\Temp\RtmpU1WDyH
 ```
 
 <img src="man/figures/README-map_green-1.png" width="100%" />

@@ -40,14 +40,18 @@ devtools::install_github("zerogetsamgow/cubethemes")
 
 ## Usage
 
+```{r setup, echo=FALSE}
+library(ggplot2)
+library(tidyverse,verbose = FALSE, warn.conflicts = FALSE)
+library(stringr)
+```
+
 {cubethemes} is designed to produce {gglot2} that comply with the Cube Brand Guidelines simply. For example.
 
-```{r white example, warnings=FALSE}
-library(ggplot2)
-library(tidyverse,verbose = FALSE)
+```{r white_example, warnings=FALSE}
 library(cubethemes)
 library(cubepalette)
-library(stringr)
+
 ## basic example code
 ggplot2::ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
   geom_point(size=3) +
@@ -125,7 +129,7 @@ ggplot(
   geom_text(family="Agenda",colour = cubepalette::cube.darkgreen, lineheight=.5)+
   scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.7)) +
   labs(title="States and Territories of Australia")+
-  theme_cube_map(base_colour = "grey")
+  theme_cube_map(base_colour = "grey", base_size = 10)
 ```
 
 ```{r map_green, warnings = FALSE}
@@ -148,6 +152,6 @@ ggplot(
   geom_text(family="Agenda",colour = cubepalette::cube.grey, lineheight=.5)+
   scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.2)) +
   labs(title="States and Territories of Australia")+
-  theme_cube_map(base_colour = "green")
+  theme_cube_map(base_colour = "green", base_size = 10)
 ```
 
