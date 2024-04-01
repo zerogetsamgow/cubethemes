@@ -1,11 +1,4 @@
 
-<!-- avoid border around images -->
-<style>
-    img {
-        border-style: none;
-        width: 80%;
-    }
-</style>
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # cubethemes
@@ -27,16 +20,6 @@ devtools::install_github("zerogetsamgow/cubethemes")
 ```
 
 ## Usage
-
-    #> ── Attaching core tidyverse packages ───────── tidyverse 2.0.0 ──
-    #> ✔ dplyr     1.1.4     ✔ readr     2.1.5
-    #> ✔ forcats   1.0.0     ✔ stringr   1.5.1
-    #> ✔ lubridate 1.9.3     ✔ tibble    3.2.1
-    #> ✔ purrr     1.0.2     ✔ tidyr     1.3.1
-    #> ── Conflicts ─────────────────────────── tidyverse_conflicts() ──
-    #> ✖ dplyr::filter() masks stats::filter()
-    #> ✖ dplyr::lag()    masks stats::lag()
-    #> ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
 {cubethemes} is designed to produce {gglot2} that comply with the Cube
 Brand Guidelines simply. For example.
@@ -163,7 +146,7 @@ ggplot(
   scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.2)) +
   labs(title="States and Territories of Australia")+
   theme_cube_map(base_colour = "green", base_size = 10)
-#> Reading state2021 file found in C:\Users\SAMUEL~1\AppData\Local\Temp\RtmpU1WDyH
+#> Reading state2021 file found in C:\Users\SAMUEL~1\AppData\Local\Temp\RtmpAvyHz2
 ```
 
 <img src="man/figures/README-map_green-1.png" width="100%" />

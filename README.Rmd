@@ -2,14 +2,6 @@
 output: github_document
 ---
 
-<!-- avoid border around images -->
-<style>
-    img {
-        border-style: none;
-        width: 80%;
-    }
-</style>
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
@@ -40,7 +32,7 @@ devtools::install_github("zerogetsamgow/cubethemes")
 
 ## Usage
 
-```{r setup, echo=FALSE}
+```{r setup, include = FALSE, echo=FALSE, output=FALSE}
 library(ggplot2)
 library(tidyverse,verbose = FALSE, warn.conflicts = FALSE)
 library(stringr)
