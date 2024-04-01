@@ -81,7 +81,7 @@ ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
 
 - `theme_cube_orange()` with `cube_palette_discrete$other`
 
-These themes can also work with the `cube_palette_tints` palettes `greys`,`greens` and `pinks`. 
+These themes can also work with the `cube_palette_tints` palettes `greys`,`greens` and `oranges`. 
 
 ```{r orange example}
 ## basic example of a green plot
