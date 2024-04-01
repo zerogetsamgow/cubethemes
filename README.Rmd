@@ -42,9 +42,9 @@ devtools::install_github("zerogetsamgow/cubethemes")
 
 {cubethemes} is designed to produce {gglot2} that comply with the Cube Brand Guidelines simply. For example.
 
-```{r white example}
+```{r white example, warnings=FALSE}
 library(ggplot2)
-library(tidyverse)
+library(tidyverse,verbose = FALSE)
 library(cubethemes)
 library(cubepalette)
 library(stringr)
@@ -67,7 +67,7 @@ Each of these themes is designed to work with different discrete palettes from {
 
 - `theme_cube_green()` with `cube_palette_discrete$light`
 
-```{r green example}
+```{r green example, warnings = FALSE}
 ## basic example of a green plot
 ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
   geom_point(size=3) +
@@ -99,13 +99,13 @@ As well as utilising the {cubepalette} these themes are rendered using {showtext
 ## Maps for any background  
 
 {cubethemes} exports a theme - `theme_cube_map()` to be used when plotting maps. This theme can be produced with white, green, orange or grey backgrounds. White is the default. Green and grey work with the default background colours in Cube's PowerPoint template.
-```{r map_prep, echo=FALSE}
+```{r map_prep, echo=FALSE, warnings = FALSE}
 library(sf)
 library(strayr)
 ```
 
 
-```{r map_grey}
+```{r map_grey, warnings = FALSE}
 
 ## basic example of a map with grey background
 ggplot(
@@ -128,7 +128,7 @@ ggplot(
   theme_cube_map(base_colour = "grey")
 ```
 
-```{r map_green}
+```{r map_green, warnings = FALSE}
 
 ## basic example of a map with grey background
 ggplot(
