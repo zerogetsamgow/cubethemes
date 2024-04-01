@@ -83,10 +83,10 @@ ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
 
 These themes can also work with the `cube_palette_tints` palettes `greys`,`greens` and `oranges`. 
 
-```{r orange example}
+```{r orange example, warnings=FALSE}
 ## basic example of a green plot
 ggplot(data=mtcars,aes(x = as.factor(cyl), colour=NULL, fill=as.factor(cyl), group=cyl)) +
-  geom_histogram(stat="count",size=3)+
+  geom_histogram(stat="count")+
   scale_fill_manual(name="Cylinders", values=cube_palettes_tints$greens,labels=stringr::str_to_title) +
   scale_y_continuous(name="Count", expand=c(0,0.04))+
   scale_x_discrete(name=NULL)+
@@ -99,7 +99,7 @@ As well as utilising the {cubepalette} these themes are rendered using {showtext
 ## Maps for any background  
 
 {cubethemes} exports a theme - `theme_cube_map()` to be used when plotting maps. This theme can be produced with white, green, orange or grey backgrounds. White is the default. Green and grey work with the default background colours in Cube's PowerPoint template.
-```{r map_prep}
+```{r map_prep, echo=FALSE}
 library(sf)
 library(strayr)
 ```
