@@ -44,6 +44,7 @@ devtools::install_github("zerogetsamgow/cubethemes")
 
 ```{r white example}
 library(ggplot2)
+library(tidyverse)
 library(cubethemes)
 library(cubepalette)
 library(stringr)
@@ -58,7 +59,7 @@ ggplot2::ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) 
 
 ## Three themes to cubify them all  
 
-{cubethemes} exports three themes - `theme_cube_white()`(seen above), `theme_cube_green()` and `theme_cube_pink` to enable plots to be produce any Cube publication. 
+{cubethemes} exports three themes - `theme_cube_white()`(seen above), `theme_cube_green()` and `theme_cube_orange` to enable plots to be produced for any Cube publication. 
 
 Each of these themes is designed to work with different discrete palettes from {cubepallete}:
 
@@ -78,11 +79,11 @@ ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
 ```
 
 
-- `theme_cube_pink()` with `cube_palette_discrete$other`
+- `theme_cube_orange()` with `cube_palette_discrete$other`
 
 These themes can also work with the `cube_palette_tints` palettes `greys`,`greens` and `pinks`. 
 
-```{r pink example}
+```{r orange example}
 ## basic example of a green plot
 ggplot(data=mtcars,aes(x = as.factor(cyl), colour=NULL, fill=as.factor(cyl), group=cyl)) +
   geom_histogram(stat="count",size=3)+
@@ -90,7 +91,63 @@ ggplot(data=mtcars,aes(x = as.factor(cyl), colour=NULL, fill=as.factor(cyl), gro
   scale_y_continuous(name="Count", expand=c(0,0.04))+
   scale_x_discrete(name=NULL)+
   labs(title="Count of cylinders in mtcars")+
-  theme_cube_pink()
+  theme_cube_orange()
 ```
 
 As well as utilising the {cubepalette} these themes are rendered using {showtext} to allow the use of `Agenda` font. {cubetheme} installs these fonts.
+
+## Maps for any background  
+
+{cubethemes} exports a theme - `theme_cube_map()` to be used when plotting maps. This theme can be produced with white, green, orange or grey backgrounds. White is the default. Green and grey work with the default background colours in Cube's PowerPoint template.
+```{r map_prep}
+library(sf)
+library(strayr)
+```
+
+
+```{r map_grey}
+
+## basic example of a map with grey background
+ggplot(
+  data = 
+    strayr::read_absmap(
+      name="state2021",
+      remove_year_suffix = TRUE
+      ) |> 
+    filter(state_name %in% strayr::state_name_au) |> 
+    mutate(state_name = 
+             factor(
+               state_name, 
+               levels=strayr::state_name_au)
+           ),
+  aes(fill=state_name, x=cent_long, y =cent_lat, label = str_wrap(state_name,10))) +
+  geom_sf() +
+  geom_text(family="Agenda",colour = cubepalette::cube.darkgreen, lineheight=.5)+
+  scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.7)) +
+  labs(title="States and Territories of Australia")+
+  theme_cube_map(base_colour = "grey")
+```
+
+```{r map_green}
+
+## basic example of a map with grey background
+ggplot(
+  data = 
+    strayr::read_absmap(
+      name="state2021",
+      remove_year_suffix = TRUE
+      ) |> 
+    filter(state_name %in% strayr::state_name_au) |> 
+    mutate(state_name = 
+             factor(
+               state_name, 
+               levels=strayr::state_name_au)
+           ),
+  aes(fill=state_name, x=cent_long, y =cent_lat, label = str_wrap(state_name,10))) +
+  geom_sf() +
+  geom_text(family="Agenda",colour = cubepalette::cube.grey, lineheight=.5)+
+  scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.2)) +
+  labs(title="States and Territories of Australia")+
+  theme_cube_map(base_colour = "green")
+```
+

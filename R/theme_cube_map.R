@@ -19,7 +19,7 @@
 
 theme_cube_map <-
   function(
-    base_colour = c("white","green", "pink", "grey"),
+    base_colour = c("white","green", "orange", "grey"),
     base_size = 15,
     base_family = "Agenda") {
 
@@ -29,29 +29,30 @@ theme_cube_map <-
   thm <- ggthemes::theme_map(base_size = base_size, base_family = base_family)
 
   if(is.null(base_colour)) {base_colour="white"}
+  if(length(base_colour)>1) {base_colour="white"}
   .base_colour = switch(
       base_colour,
       "white" = cubepalette::cube.white,
-      "green" = cubepalette::cube.green,
-      "pink" = cubepalette::cube.pink,
+      "green" = cubepalette::cube.darkgreen,
+      "orange" = cubepalette::cube.lightorange,
       "grey" = cubepalette::cube.grey,
       "gray" = cubepalette::cube.grey)
 
   .text_colour=switch(
     base_colour,
-    "white" = cubepalette::cube.green,
-    "green" = cubepalette::cube.pink,
-    "pink" = cubepalette::cube.green,
-    "grey" = cubepalette::cube.green,
-    "gray" = cubepalette::cube.green)
+    "white" = cubepalette::cube.darkgreen,
+    "green" = cubepalette::cube.lightorange,
+    "orange" = cubepalette::cube.darkgreen,
+    "grey" = cubepalette::cube.darkgreen,
+    "gray" = cubepalette::cube.darkgreen)
 
   .line_colour=switch(
     base_colour,
-    "white" = cubepalette::cube.green,
-    "green" = cubepalette::cube.pink,
-    "pink" = cubepalette::cube.green,
-    "grey" = cubepalette::cube.green,
-    "gray" = cubepalette::cube.green)
+    "white" = cubepalette::cube.darkgreen,
+    "green" = cubepalette::cube.lightorange,
+    "orange" = cubepalette::cube.darkgreen,
+    "grey" = cubepalette::cube.darkgreen,
+    "gray" = cubepalette::cube.darkgreen)
 
 
 
@@ -60,6 +61,7 @@ theme_cube_map <-
       # Clear background for clean charts
       rect = ggplot2::element_blank(),
       line = ggplot2::element_blank(),
+      panel.background = element_rect(colour="transparent",fill=.base_colour),
       plot.background = element_rect(colour="transparent",fill=.base_colour),
       panel.border = ggplot2::element_blank(),
       # Define cube_founcation text parameters

@@ -12,7 +12,7 @@
 #' @importFrom ggplot2 element_rect
 
 
-theme_cube_green <- function(base.colour=cubepalette::cube.green,
+theme_cube_green <- function(base.colour=cubepalette::cube.darkgreen,
                             line.colour=cubepalette::cube.pink,
                             text.colour=cubepalette::cube.pink) {
 

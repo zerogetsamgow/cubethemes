@@ -19,6 +19,7 @@ Other cubethemes:
 \code{\link{theme_cube_green}()},
 \code{\link{theme_cube_grey}()},
 \code{\link{theme_cube_map}()},
+\code{\link{theme_cube_orange}()},
 \code{\link{theme_cube_pink}()},
 \code{\link{theme_cube_white}()}
 }

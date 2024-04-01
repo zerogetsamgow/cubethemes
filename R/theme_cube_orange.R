@@ -1,9 +1,10 @@
-#' Cube White Theme
+#' Cube orange Theme
 #'
 #' This theme takes \code{\link[cubethemes]{theme_cube_foundations}()} and sets
-#' background colour to white and line and text colours to green.
+#' background colour to lightorange and line and text colours to green.
 #'
 #' Colours are sourced from `cubepalette` and are Cube Brand Guidelines compliant.
+#'
 #'
 #' @family cubethemes
 #' @export
@@ -12,7 +13,7 @@
 #' @importFrom ggplot2 element_rect
 
 
-theme_cube_white <- function(base.colour=cube.white,
+theme_cube_orange <- function(base.colour=cube.lightorange,
                             line.colour=cube.darkgreen,
                             text.colour=cube.darkgreen) {
 
@@ -22,10 +23,10 @@ theme_cube_white <- function(base.colour=cube.white,
   thm +
     ggplot2::theme(
       # Set colours
-      text=element_text(colour = text.colour),
-      plot.background = element_rect(fill=base.colour, colour=NA),
-      axis.line = element_line(colour=line.colour),
-      axis.text = element_text(colour=text.colour)
+      text=ggplot2::element_text(colour = text.colour),
+      plot.background = ggplot2::element_rect(fill=base.colour, colour=NA),
+      axis.line = ggplot2::element_line(colour=line.colour),
+      axis.text = ggplot2::element_text(colour=text.colour)
     )
 
 }

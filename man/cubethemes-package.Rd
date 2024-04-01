@@ -6,7 +6,7 @@
 \alias{cubethemes-package}
 \title{cubethemes: Themes for cubies to create great data visualisations in ggplot2.}
 \description{
-cubethemes is a package containing themes to be used by staff at Cube Group. These themes allow cubies to create great data visualisations in ggplot2 in accordance with the Cube Group branding guidelines.
+cubethemes is a package containing themes to be used by staff at Cube Group. These themes allow cubies to create great data visualisations in ggplot2 in accordance with the Cube Group branding guidelines. Version 0.7.0 adopts the use of orange rather than pink for the palette name.
 }
 \seealso{
 Useful links:

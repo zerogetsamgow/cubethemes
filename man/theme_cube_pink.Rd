@@ -6,8 +6,8 @@
 \usage{
 theme_cube_pink(
   base.colour = cube.pink,
-  line.colour = cube.green,
-  text.colour = cube.green
+  line.colour = cube.darkgreen,
+  text.colour = cube.darkgreen
 )
 }
 \description{
@@ -25,6 +25,7 @@ Other cubethemes:
 \code{\link{theme_cube_green}()},
 \code{\link{theme_cube_grey}()},
 \code{\link{theme_cube_map}()},
+\code{\link{theme_cube_orange}()},
 \code{\link{theme_cube_white}()}
 }
 \concept{cubethemes}

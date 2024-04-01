@@ -14,9 +14,10 @@
 
 
 theme_cube_pink <- function(base.colour=cube.pink,
-                            line.colour=cube.green,
-                            text.colour=cube.green) {
+                            line.colour=cube.darkgreen,
+                            text.colour=cube.darkgreen) {
 
+  .deprecated("theme_cube_orange", msg="theme_cube_pink is deprecated. Please use theme_cube_orange instead.")
 
   thm <- cubethemes::theme_cube_foundation()
 

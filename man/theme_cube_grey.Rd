@@ -6,8 +6,8 @@
 \usage{
 theme_cube_grey(
   base.colour = cubepalette::cube.grey,
-  line.colour = cubepalette::cube.green,
-  text.colour = cubepalette::cube.green
+  line.colour = cubepalette::cube.darkgreen,
+  text.colour = cubepalette::cube.darkgreen
 )
 }
 \description{
@@ -24,6 +24,7 @@ Other cubethemes:
 \code{\link{theme_cube_gray}()},
 \code{\link{theme_cube_green}()},
 \code{\link{theme_cube_map}()},
+\code{\link{theme_cube_orange}()},
 \code{\link{theme_cube_pink}()},
 \code{\link{theme_cube_white}()}
 }

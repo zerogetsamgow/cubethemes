@@ -1,12 +1,13 @@
 Package: cubethemes
 Title: Themes for cubies to create great data visualisations in ggplot2.
-Version: 0.6.1
+Version: 0.7.0
 Authors@R: 
     person("Samuel", "Gow", , "samuel.gow@cubegroup.com.au", role = c("aut", "cre"))
 Description: cubethemes is a package containing themes to be used by staff
     at Cube Group.  These themes allow cubies to create great data
     visualisations in ggplot2 in accordance with the Cube Group branding
-    guidelines.
+    guidelines. Version 0.7.0 adopts the use of orange rather than pink for the palette
+    name.
 License: CC BY 4.0
 URL: https://github.com/zerogetsamgow/cubethemes
 BugReports: https://github.com/zerogetsamgow/cubiethemes/repo/issues

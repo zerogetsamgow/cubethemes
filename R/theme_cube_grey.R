@@ -13,8 +13,8 @@
 
 
 theme_cube_grey <- function(base.colour=cubepalette::cube.grey,
-                             line.colour=cubepalette::cube.green,
-                             text.colour=cubepalette::cube.green) {
+                             line.colour=cubepalette::cube.darkgreen,
+                             text.colour=cubepalette::cube.darkgreen) {
 
 
   thm <- cubethemes::theme_cube_foundation()
