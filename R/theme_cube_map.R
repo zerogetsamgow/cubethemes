@@ -78,19 +78,15 @@ theme_cube_map <-
           lineheight = 0.5,
           margin = margin(0, 0, .5, 0, "cm")
         ),
-      # Define axis foundation parameters
-     # axis.line = ggplot2::element_blank(),
-    #  axis.ticks = ggplot2::element_blank(),
-     # axis.text = ggplot2::element_blank(),
-      # Define foundation legend parameters
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_blank(),
+      legend.key.size = unit(4,"mm"),
       legend.position.inside = c(0,0),
       legend.title.position = "top",
       legend.direction = "horizontal",
       legend.margin = ggplot2::margin(.1, .1, .1, .1, "cm"),
-    legend.title = element_text(family="Agenda"),
-    legend.text = element_text(family="Agenda"),
+      legend.title = element_text(family="Agenda"),
+      legend.text = element_text(family="Agenda"),
       # Define foundation margin parameters
       plot.margin = ggplot2::margin(.5, .5, 0, .5, "cm"),
       # Define foundation title parameters
