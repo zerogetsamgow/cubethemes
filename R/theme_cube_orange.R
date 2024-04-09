@@ -14,6 +14,7 @@
 
 
 theme_cube_orange <- function(base.colour=cube.lightorange,
+                              base.size = 15,
                             line.colour=cube.darkgreen,
                             text.colour=cube.darkgreen) {
 
@@ -23,7 +24,7 @@ theme_cube_orange <- function(base.colour=cube.lightorange,
   thm +
     ggplot2::theme(
       # Set colours
-      text=ggplot2::element_text(colour = text.colour),
+      text=ggplot2::element_text(size = base.size, colour = text.colour),
       plot.background = ggplot2::element_rect(fill=base.colour, colour=NA),
       axis.line = ggplot2::element_line(colour=line.colour),
       axis.text = ggplot2::element_text(colour=text.colour)

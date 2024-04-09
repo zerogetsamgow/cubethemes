@@ -13,6 +13,7 @@
 
 
 theme_cube_grey <- function(base.colour=cubepalette::cube.grey,
+                            base.size = 15,
                              line.colour=cubepalette::cube.darkgreen,
                              text.colour=cubepalette::cube.darkgreen) {
 
@@ -22,7 +23,7 @@ theme_cube_grey <- function(base.colour=cubepalette::cube.grey,
   thm +
     ggplot2::theme(
       # Set colours
-      text=element_text(colour = text.colour),
+      text=element_text(size = base.size, colour = text.colour),
       plot.background = element_rect(fill=base.colour, colour=NA),
       axis.line = element_line(colour=line.colour),
       axis.text = element_text(colour=text.colour)

@@ -67,8 +67,8 @@ theme_cube_map <-
       # Define cube_founcation text parameters
       text =
         ggplot2::element_text(
-          family="Agenda",
-          size=25,
+          family=base_family,
+          size=base_size,
           colour=.text_colour
         ),
       plot.title =
@@ -85,8 +85,16 @@ theme_cube_map <-
       legend.title.position = "top",
       legend.direction = "horizontal",
       legend.margin = ggplot2::margin(.1, .1, .1, .1, "cm"),
-      legend.title = element_text(family="Agenda"),
-      legend.text = element_text(family="Agenda"),
+      legend.text =
+        element_text(
+          family=base_family),
+      legend.title =
+        element_text(
+          #family=base_family,
+          lineheight=.3,
+          vjust=1,
+          margin = margin(0.0,0.0,0.0,0.0,"cm")),
+      legend.spacing.y = unit(0, "cm"),
       # Define foundation margin parameters
       plot.margin = ggplot2::margin(.5, .5, 0, .5, "cm"),
       # Define foundation title parameters

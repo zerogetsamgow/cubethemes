@@ -80,8 +80,8 @@ ggplot(data=mtcars,aes(x = as.factor(cyl), colour=NULL, fill=as.factor(cyl), gro
   scale_x_discrete(name=NULL)+
   labs(title="Count of cylinders in mtcars")+
   theme_cube_orange()
-#> Warning in geom_histogram(stat = "count"): Ignoring unknown
-#> parameters: `binwidth`, `bins`, and `pad`
+#> Warning in geom_histogram(stat = "count"): Ignoring unknown parameters:
+#> `binwidth`, `bins`, and `pad`
 ```
 
 <img src="man/figures/README-orange example-1.png" width="100%" />
@@ -97,8 +97,7 @@ plotting maps. This theme can be produced with white, green, orange or
 grey backgrounds. White is the default. Green and grey work with the
 default background colours in Cube’s PowerPoint template.
 
-    #> Linking to GEOS 3.11.2, GDAL 3.7.2, PROJ 9.3.0; sf_use_s2() is
-    #> TRUE
+    #> Linking to GEOS 3.11.2, GDAL 3.7.2, PROJ 9.3.0; sf_use_s2() is TRUE
 
 ``` r
 
@@ -146,7 +145,7 @@ ggplot(
   scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.2)) +
   labs(title="States and Territories of Australia")+
   theme_cube_map(base_colour = "green", base_size = 10)
-#> Reading state2021 file found in C:\Users\SAMUEL~1\AppData\Local\Temp\RtmpAvyHz2
+#> Reading state2021 file found in C:\Users\SAMUEL~1\AppData\Local\Temp\RtmpOm56pj
 ```
 
 <img src="man/figures/README-map_green-1.png" width="100%" />
