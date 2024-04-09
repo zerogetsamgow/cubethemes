@@ -10,12 +10,13 @@
 #' @importFrom ggplot2 theme
 #' @importFrom ggplot2 element_text
 #' @importFrom ggplot2 element_rect
+#' @importFrom ggplot2 element_line
 
 
 theme_cube_grey <- function(base.colour=cubepalette::cube.grey,
                             base.size = 15,
-                             line.colour=cubepalette::cube.darkgreen,
-                             text.colour=cubepalette::cube.darkgreen) {
+                            line.colour=cubepalette::cube.darkgreen,
+                            text.colour=cubepalette::cube.darkgreen) {
 
 
   thm <- cubethemes::theme_cube_foundation()
@@ -44,11 +45,13 @@ theme_cube_grey <- function(base.colour=cubepalette::cube.grey,
 #' @importFrom ggplot2 theme
 #' @importFrom ggplot2 element_text
 #' @importFrom ggplot2 element_rect
+#' @importFrom ggplot2 element_line
 
 
-theme_cube_gray <- function(base.colour=cube.grey,
-                            line.colour=cube.green,
-                            text.colour=cube.green) {
+theme_cube_gray <- function(base.colour=cubepalette::cube.grey,
+                            base.size = 15,
+                            line.colour=cubepalette::cube.darkgreen,
+                            text.colour=cubepalette::cube.darkgreen) {
 
 
   thm <- cubethemes::theme_cube_foundation()
@@ -56,7 +59,7 @@ theme_cube_gray <- function(base.colour=cube.grey,
   thm +
     ggplot2::theme(
       # Set colours
-      text=element_text(colour = text.colour),
+      text=element_text(size = base.size, colour = text.colour),
       plot.background = element_rect(fill=base.colour, colour=NA),
       axis.line = element_line(colour=line.colour),
       axis.text = element_text(colour=text.colour)

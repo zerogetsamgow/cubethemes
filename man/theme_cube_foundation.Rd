@@ -4,11 +4,9 @@
 \alias{theme_cube_foundation}
 \title{Cube Foundation Theme}
 \usage{
-theme_cube_foundation(base_size = 15, base_family = "Agenda")
+theme_cube_foundation(base_family = "Agenda")
 }
 \arguments{
-\item{base_size}{base font size, given in pts.}
-
 \item{base_family}{base font family}
 }
 \description{
