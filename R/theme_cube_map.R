@@ -20,7 +20,7 @@
 theme_cube_map <-
   function(
     base_colour = c("white","green", "orange", "grey"),
-    base_size = 15,
+    base_size = 20,
     base_family = "Agenda") {
 
 
@@ -87,10 +87,13 @@ theme_cube_map <-
       legend.margin = ggplot2::margin(.1, .1, .1, .1, "cm"),
       legend.text =
         element_text(
+          size=rel(1),
           family=base_family),
       legend.title =
         element_text(
           #family=base_family,
+
+          size=rel(1),
           lineheight=.3,
           vjust=1,
           margin = margin(0.0,0.0,0.0,0.0,"cm")),

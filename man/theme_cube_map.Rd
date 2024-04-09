@@ -6,7 +6,7 @@
 \usage{
 theme_cube_map(
   base_colour = c("white", "green", "orange", "grey"),
-  base_size = 15,
+  base_size = 20,
   base_family = "Agenda"
 )
 }
