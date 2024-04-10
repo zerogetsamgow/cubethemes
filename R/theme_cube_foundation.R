@@ -61,7 +61,7 @@ theme_cube_foundation <- function(base_family = "Agenda") {
           size=rel(1)
         ),
       plot.caption = element_text(size=rel(1),hjust = 0),
-      strip.text = element_text(size=rel(1), face = "bold"),
+      strip.text = element_text(size=rel(1)),
       # Define axis foundation parameters
       axis.line =
         element_line(
