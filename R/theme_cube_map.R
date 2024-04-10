@@ -80,7 +80,8 @@ theme_cube_map <-
         ),
       legend.text =
         element_text(
-          size=rel(1)),
+          size=rel(1),
+          margin = margin(0,0,0,0,"cm")),
       legend.title =
         element_text(
           size=rel(1),
