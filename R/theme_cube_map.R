@@ -86,7 +86,7 @@ theme_cube_map <-
           size=rel(1),
           lineheight=.3,
           vjust=1,
-          margin = margin(0.0,0.0,0.0,0.0,"cm")),
+          margin = margin(0,0,0,0,"cm")),
       # Define legend parameters
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_blank(),
@@ -94,7 +94,7 @@ theme_cube_map <-
       legend.position.inside = c(0,0),
       legend.title.position = "top",
       legend.direction = "horizontal",
-      legend.margin = ggplot2::margin(.1, .1, .1, .1, "cm"),
+      legend.margin = ggplot2::margin(.1, .1, 0, .1, "cm"),
       legend.spacing.y = unit(0, "cm"),
       # Define foundation margin parameters
       plot.margin = ggplot2::margin(.5, .5, 0, .5, "cm"),

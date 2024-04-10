@@ -55,7 +55,7 @@ theme_cube_foundation <- function(base_family = "Agenda") {
           size=rel(1),
           lineheight=.3,
           vjust=1,
-          margin = margin(0.0,0.0,0.0,0.0,"cm")),
+          margin = margin(0,0,0,0,"cm")),
       axis.text =
         element_text(
           size=rel(1)
