@@ -13,7 +13,7 @@
 
 
 theme_cube_white <- function(base.colour=cube.white,
-                             base.size = 15,
+                             base.size = 25,
                             line.colour=cube.darkgreen,
                             text.colour=cube.darkgreen) {
 

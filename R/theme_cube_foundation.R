@@ -45,8 +45,13 @@ theme_cube_foundation <- function(base_family = "Agenda") {
           size=rel(1.2),
           face="bold",
           lineheight = 0.5,
-          margin = margin(0, 0, .5, 0, "cm")
+          margin = margin(0, 0, .2, 0, "cm")
           ),
+      plot.subtitle =
+        element_text(
+          lineheight = 0.5,
+          margin = margin(0, 0, .5, 0, "cm")
+        ),
       legend.text =
         element_text(
           size=rel(1)),
@@ -54,18 +59,18 @@ theme_cube_foundation <- function(base_family = "Agenda") {
         element_text(
           size=rel(1),
           lineheight=.3,
-          vjust=1,
-          margin = margin(0,0,0,0,"cm")),
+          vjust=.5,
+          margin = margin(0,.2,0,.2,"cm")),
       axis.text =
         element_text(
           size=rel(1)
         ),
       plot.caption = element_text(size=rel(1),hjust = 0),
-      strip.text = element_text(size=rel(1)),
+      strip.text = element_text(lineheight=.3, size=rel(1)),
       # Define axis foundation parameters
       axis.line =
         element_line(
-          linewidth=1.2,
+          linewidth=1.1,
           lineend = "round"
           ),
       axis.ticks = element_blank(),
@@ -75,6 +80,7 @@ theme_cube_foundation <- function(base_family = "Agenda") {
       legend.key.size = unit(4,"mm"),
       legend.position = "bottom",
       legend.margin = ggplot2::margin(.1, .1, .1, .1, "cm"),
+      legend.box.margin = ggplot2::margin(.1, .1, .1, .1, "cm"),
       # Define foundation margin parameters
       plot.margin = ggplot2::margin(.5, .5, 0, .5, "cm"),
       # Define foundation title parameters

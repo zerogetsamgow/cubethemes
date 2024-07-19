@@ -6,7 +6,7 @@
 \usage{
 theme_cube_grey(
   base.colour = cubepalette::cube.grey,
-  base.size = 15,
+  base.size = 25,
   line.colour = cubepalette::cube.darkgreen,
   text.colour = cubepalette::cube.darkgreen
 )

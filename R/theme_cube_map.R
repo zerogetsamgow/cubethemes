@@ -20,7 +20,7 @@
 theme_cube_map <-
   function(
     base_colour = c("white","green", "orange", "grey"),
-    base_size = 20,
+    base_size = 25,
     base_family = "Agenda") {
 
 
