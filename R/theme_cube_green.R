@@ -14,7 +14,7 @@
 
 
 theme_cube_green <- function(base.colour=cubepalette::cube.darkgreen,
-                             base.size = 25,
+                             base.size = 10,
                              line.colour=cubepalette::cube.pink,
                              text.colour=cubepalette::cube.pink) {
 

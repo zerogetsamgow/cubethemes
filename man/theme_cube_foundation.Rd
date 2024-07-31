@@ -19,7 +19,7 @@ because those themes define elements deep in the hierarchy.
 }
 \details{
 This theme takes \code{\link[ggthemes]{theme_foundations}()} and sets
-base text family and size to \code{Agenda} and \code{15}.
+base text family to `Agenda``.
 }
 \seealso{
 Other cubethemes: 

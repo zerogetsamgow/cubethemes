@@ -1,6 +1,6 @@
 Package: cubethemes
 Title: Themes for cubies to create great data visualisations in ggplot2.
-Version: 0.8.0
+Version: 0.9.0
 Authors@R: 
     person("Samuel", "Gow", , "samuel.gow@cubegroup.com.au", role = c("aut", "cre"))
 Description: cubethemes is a package containing themes to be used by staff

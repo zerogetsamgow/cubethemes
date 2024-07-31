@@ -75,7 +75,9 @@ These themes can also work with the `cube_palette_tints` palettes
 ## basic example of a green plot
 ggplot(data=mtcars,aes(x = as.factor(cyl), colour=NULL, fill=as.factor(cyl), group=cyl)) +
   geom_histogram(stat="count")+
-  scale_fill_manual(name="Cylinders", values=cube_palettes_tints$greens,labels=stringr::str_to_title) +
+  scale_fill_manual(
+    name="Cylinders", 
+    values=cube_palettes_tints$greens,labels=stringr::str_to_title) +
   scale_y_continuous(name="Count", expand=c(0,0.04))+
   scale_x_discrete(name=NULL)+
   labs(title="Count of cylinders in mtcars")+
@@ -145,7 +147,7 @@ ggplot(
   scale_fill_manual(guide='none',values=colorspace::lighten(strayr::palette_state_name_2016,.2)) +
   labs(title="States and Territories of Australia")+
   theme_cube_map(base_colour = "green", base_size = 10)
-#> Reading state2021 file found in C:\Users\SAMUEL~1\AppData\Local\Temp\Rtmpuib6xZ
+#> Reading state2021 file found in C:\Users\SAMUEL~1\AppData\Local\Temp\Rtmp0gpr2S
 ```
 
 <img src="man/figures/README-map_green-1.png" width="100%" />

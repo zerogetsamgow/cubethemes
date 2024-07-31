@@ -8,7 +8,7 @@
 #' because those themes define elements deep in the hierarchy.
 #'
 #' This theme takes \code{\link[ggthemes]{theme_foundations}()} and sets
-#' base text family and size to `Agenda` and `15`.
+#' base text family to `Agenda``.
 #'
 #' @inheritParams ggthemes::theme_foundation
 #'

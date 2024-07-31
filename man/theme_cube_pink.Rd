@@ -6,7 +6,7 @@
 \usage{
 theme_cube_pink(
   base.colour = cube.pink,
-  base.size = 25,
+  base.size = 10,
   line.colour = cube.darkgreen,
   text.colour = cube.darkgreen
 )

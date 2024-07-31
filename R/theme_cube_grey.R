@@ -14,7 +14,7 @@
 
 
 theme_cube_grey <- function(base.colour=cubepalette::cube.grey,
-                            base.size = 25,
+                            base.size = 10,
                             line.colour=cubepalette::cube.darkgreen,
                             text.colour=cubepalette::cube.darkgreen) {
 

@@ -40,7 +40,7 @@ library(stringr)
 
 {cubethemes} is designed to produce {gglot2} that comply with the Cube Brand Guidelines simply. For example.
 
-```{r white_example, warnings=FALSE}
+```{r white_example, warnings=FALSE, fig.height = 3, fid.width = 5}
 library(cubethemes)
 library(cubepalette)
 
@@ -63,7 +63,7 @@ Each of these themes is designed to work with different discrete palettes from {
 
 - `theme_cube_green()` with `cube_palette_discrete$light`
 
-```{r green example, warnings = FALSE}
+```{r green example, warnings = FALSE, fig.height = 3, fid.width = 5}
 ## basic example of a green plot
 ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
   geom_point(size=3) +
@@ -79,11 +79,13 @@ ggplot(data=iris,aes(x=Sepal.Length, y = Petal.Length,colour=Species)) +
 
 These themes can also work with the `cube_palette_tints` palettes `greys`,`greens` and `oranges`. 
 
-```{r orange example, warnings=FALSE}
+```{r orange example, warnings=FALSE, fig.height = 3, fid.width = 5}
 ## basic example of a green plot
 ggplot(data=mtcars,aes(x = as.factor(cyl), colour=NULL, fill=as.factor(cyl), group=cyl)) +
   geom_histogram(stat="count")+
-  scale_fill_manual(name="Cylinders", values=cube_palettes_tints$greens,labels=stringr::str_to_title) +
+  scale_fill_manual(
+    name="Cylinders", 
+    values=cube_palettes_tints$greens,labels=stringr::str_to_title) +
   scale_y_continuous(name="Count", expand=c(0,0.04))+
   scale_x_discrete(name=NULL)+
   labs(title="Count of cylinders in mtcars")+
@@ -101,7 +103,7 @@ library(strayr)
 ```
 
 
-```{r map_grey, warnings = FALSE}
+```{r map_grey, warnings = FALSE, fig.height = 5, fid.width = 5}
 
 ## basic example of a map with grey background
 ggplot(
@@ -124,7 +126,7 @@ ggplot(
   theme_cube_map(base_colour = "grey", base_size = 10)
 ```
 
-```{r map_green, warnings = FALSE}
+```{r map_green, warnings = FALSE, fig.height = 5, fid.width = 5}
 
 ## basic example of a map with grey background
 ggplot(
